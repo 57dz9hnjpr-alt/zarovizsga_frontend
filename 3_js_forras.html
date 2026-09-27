@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	<!-- Ide jön  a feladat megoldása... -->
+
+	 // Elso feladat
+		function kivalogatParosOtven(szamokTomb) {
+
+			var eredmenyek = [];
+
+			for (var i = 0; i < szamokTomb.length; i++) {
+				var aktualisSzam = szamokTomb[i];
+
+				if (aktualisSzam % 2 == 0 && aktualisSzam >50) {
+					
+					eredmenyek.push(aktualisSzam)
+				}
+				
+				
+			}
+			return eredmenyek;
+			
+		}
+
+
+		// Masodik feladat
+
+		function aBetukSzamaDiv() {
+
+			var dbA = 0;
+
+			var divTartalom = document.querySelector("div").textContent;
+
+			for (var i = 0; i < divTartalom.length; i++) {
+				
+				if (divTartalom[i] == "a") {
+					dbA++;
+				}
+			}
+			return dbA;
+		}
+
+		//Harmadik feladat
+
+		function osszeadasFeliras(eredmeny, elsoOperandus, masodikOperandus) {
+
+			var elsoTalalat = document.querySelector("." + eredmeny);
+
+			var _elsoOperandus = Number(elsoOperandus);
+			var _masodikOperandus = Number(masodikOperandus);
+
+			var p = document.createElement("p");
+
+			var kiiras = document.createTextNode(_elsoOperandus + " + " + _masodikOperandus + " = " + (_elsoOperandus + _masodikOperandus));
+
+   			p.appendChild(kiiras);
+
+    		elsoTalalat.appendChild(p);
+		}
+			console.log(osszeadasFeliras("eredmeny",2,5));
+	
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div></div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
